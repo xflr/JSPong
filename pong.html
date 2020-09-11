@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alexandre Bressane's Pong Game - Demo</title>
+<link href="./css/alexandrebressane.css" rel="stylesheet" type="text/css">
+    <script src="./js/alexandrebressane.js"></script>
+    <script src= "http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
+    <audio id="wallhit" src="./audio/wallhit.mp3"  preload="auto" autobuffer></audio>  
+    <audio id="sidewallhit" src="./audio/sidewallhit.mp3"  preload="auto" autobuffer></audio>
+    <audio id="paddlehit" src="./audio/paddlehit.mp3"  preload="auto" autobuffer></audio>
+</head>
+<body>
+    
+<div class="container">
+  <article class="left_article">
+        
+    
+    
+<canvas id='myCanvas' height='600' width='400'  style="border:1px solid #0F0F0F; background:#FFFFFF" > </canvas>
+        </article>
+     <table>
+            <tr>
+                <td width='199'><canvas id='p1Name' height='30' width='100' style="border:1px solid #0F0F0F;" onclick="start()" > </canvas></td><td width='199' align='right'><canvas id='p2Name' height='30' width='100' style="border:1px solid #0F0F0F;" onclick="start()" > </canvas></td>
+            </tr>
+            <tr>
+                <td><canvas id='p1Score' height='30' width='100' style="border:1px solid #0F0F0F;" onclick="start()" > </canvas></td>
+                <td align='right'><canvas id='p2Score' height='30' width='100' style="border:1px solid #0F0F0F;" onclick="start()" > </canvas></td>
+                <table>
+                    <tr>
+                <td width='598' align='center'><br> <button class="button" onclick="start()">START GAME!</button> <button class="button" onclick="PlaySound()">PLAY MUSIC   </button><button class="button" onclick="PauseSound()">PAUSE MUSIC   </button></td>
+                    </tr>
+                    <tr><br><br><br>TO PLAY USE:<br> - MOUSE FOR "PLAYER 1" AND <br> - KEYBOARD ARROWS (LEFT / RIGHT) FOR "PLAYER 2"!</tr>
+                </table>
+            </tr>
+        </table>
+      <aside class="right_article">
+ 		 </aside>
+
+  </section>
+<footer class="secondary_header footer"> </footer>
+</div>
+</body>
+</html>
