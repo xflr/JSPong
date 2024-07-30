@@ -13,9 +13,9 @@ $(" #welcome").css({"position":'absolute'});
 $( "#welcome" ).width(300);
 $( "#welcome" ).height(300);
   
-$( "#dialog" ).hide();
+$( "#dialog" ).remove();
 function showSplash() {
-	$( "#welcome" ).hide();
+	$( "#welcome" ).remove();
 	$( "#dialog" ).dialog({
 	  resizable: false,
 	  draggable: false,
