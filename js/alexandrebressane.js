@@ -3,7 +3,7 @@
 var audio = new Audio('./audio/backgroundmusic.mp3');
  
 $( "#game").hide();
-
+$( "#dialog" ).hide();
 $( "#welcome" ).dialog({
   resizable: false,
   draggable: false,
@@ -13,13 +13,13 @@ $(" #welcome").css({"position":'absolute'});
 $( "#welcome" ).width(300);
 $( "#welcome" ).height(300);
   
-$( "#dialog" ).remove();
+
 function showSplash() {
 	$( "#welcome" ).remove();
 	$( "#dialog" ).dialog({
 	  resizable: false,
 	  draggable: false,
-	  dialogClass: "no-titlebar",
+	  //dialogClass: "no-titlebar",
 	});;
 	$(" #dialog").css({"left": "50%", "margin-left": "-400px", "position":'absolute'});
 	$( "#dialog" ).width(800);
@@ -54,6 +54,8 @@ var gameRuning = false;
 	
 	
 function start() {
+	$( "#dialog" ).remove();
+	$( "#welcome" ).remove();
 	$( "#game").show();
 
 	PauseSound();
@@ -62,7 +64,7 @@ function start() {
 		document.location.reload();
 		gameRuning = false;
 	}
-	$( "#dialog" ).hide();
+	
 	
 	
 	var p1Name = prompt("Please enter name for PLAYER 1", "Beavis");
