@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alexandre Bressane's Pong Game - Demo</title>
+<link href="./css/alexandrebressane.css" rel="stylesheet" type="text/css">
+	
+    <script src= "http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <audio id="wallhit" src="./audio/wallhit.mp3"  preload="auto" autobuffer></audio>  
+    <audio id="sidewallhit" src="./audio/sidewallhit.mp3"  preload="auto" autobuffer></audio>
+    <audio id="paddlehit" src="./audio/paddlehit.mp3"  preload="auto" autobuffer></audio>
+</head>
+<body>
+  <div id="welcome" onClick='showSplash()'>
+		<p> WELCOME TO PONG. After closing this information window you will agree to do not copy the code without consent or spend too much time playing. Enjoy! </p>
+		<p> CLICK ON THIS MESSAGE TO CONTINUE..."</p>
+	</div>
+	<div id="dialog">
+		<img src="./img/splash.jpeg" onclick="start()" />
+	</div>
+	<div id='game' class="container">
+	  <article class="left_article">
+			<canvas id='myCanvas' height='600' width='400'  style="border:1px solid #0F0F0F; background:#FFFFFF" > </canvas>
+	   </article>
+	   <article>
+		 <table>
+				<tr>
+					<td width='199'><canvas id='p1Name' height='30' width='100' style="border:1px solid #0F0F0F;"> </canvas></td><td width='199' align='right'><canvas id='p2Name' height='30' width='100' style="border:1px solid #0F0F0F;"> </canvas></td>
+				</tr>
+				<tr>
+					<td><canvas id='p1Score' height='30' width='100' style="border:1px solid #0F0F0F;" onclick="start()" > </canvas></td>
+					<td align='right'><canvas id='p2Score' height='30' width='100' style="border:1px solid #0F0F0F;" onclick="start()" > </canvas></td>
+					<table>
+						<tr>
+					<td width='598' align='center'><br> <button class="button" id='start' onclick="start()">NEW GAME!</button> <button class="button" onclick="PlaySound()">PLAY MUSIC   </button><button class="button" onclick="PauseSound()">PAUSE MUSIC   </button></td>
+						</tr>
+						<tr><br><br><br>TO PLAY USE: <br> - KEYBOARD ARROWS (LEFT / RIGHT)!</tr>
+					</table>
+				</tr>
+			</table>
+		</article>
+</div>		
+
+<script src='./js/alexandrebressane.js'>
+</script>
+
+</body>
+</html>
