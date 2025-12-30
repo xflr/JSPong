@@ -3,6 +3,9 @@ a:link {
    color:inherit;
     background: inherit;
 }
+.ui-dialog-titlebar-close {
+    display: none;
+}
 .button {
 	float: left;
 	margin-right: left;
